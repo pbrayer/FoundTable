@@ -11,7 +11,7 @@ body {
     color: black;
 }
 
-.hero {
+#explainer {
     /* Sizing */
     width: 100vw;
     height: 100vh;
@@ -81,6 +81,12 @@ body {
     -webkit-box-shadow: inset 0 0 10px #000000;
     box-shadow:         inset 0 0 10px #000000;
 }
+
+#description {
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+}
   
 #login {
     box-shadow: 0 8px 6px -6px black;
@@ -88,4 +94,31 @@ body {
 
 #getStarted {
     box-shadow: 0 8px 6px -6px black;
+}
+
+#chosenRestaurant {
+    width: 100vw;
+    height: 100vh;
+    
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+    /* Text styles */
+    text-align: center;
+    color: black; /* ADD THIS LINE */
+    
+    /* Background styles */
+    background-image: url('../images/murrays.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#happyCouple {
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+         box-shadow: 0 8px 6px -6px black;
 }

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Found Table</title>
+
+    <link rel="stylesheet" type="text/css" href="../Project3/assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-light" style="padding: 0px 100px 0px 100px;">
+        <div class="mx-auto order-0">
+            <a class="navbar-brand mx-auto" href="#">
+                <img src="../Project3/assets/images/logo.png" width="230" height="50" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" style="color: black; margin-right: 50px;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.murraysrestaurant.com/" target="_blank" style="color: black; margin-right: 50px;">Go to Website</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://www.murraysrestaurant.com/#" target="_blank" style="color: black; margin-right: 50px;">View Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: black; margin-right: 50px;">Contact Us</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" id="login"
+                        style="color: white; margin-right: 50px; padding-left: 20px; padding-right: 20px; background-color: rgb(93, 93, 204); border-style: hidden; border-width: 1px; border-radius: 15px; text-align: center;">Log
+                        In</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <section class="hero" id="chosenRestaurant">
+            <div class="hero-inner">
+                <div class="col-md-6" style="float: left; margin-top: 300px;">
+                    <h2 style="color: white; margin-left: 10px;">Find your table now!</h2>
+                    <br>
+                    <h4 style="color: white; margin-left: 10px;">How Many People are in Your Party?</h4>
+                    <div class="form-group" style="width: 200px; margin: 0 auto;">
+                        <select class="form-control" id="sel1">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                        </select>
+                      </div>
+                    <br>
+                    <h4 style="color: white; margin-left: 10px;">Check availability: </h4>
+                    <input type="datetime-local" id="meeting-time"
+       name="meeting-time" value="2019-06-30T19:30"
+       min="2019-06-25T00:00" max="2020-06-30T00:00">
+                    <a href="#" class="btn" id="findTable"
+                        style="background-color:orange; color: white; border: none;">Find Table</a>
+                </div>
+                <div class="col-md-6 mx-auto" style="float: left;">
+                    <h1 style="color: white; margin-top: 10px;">Murray's Steakhouse</h1>
+                    <p id="description" style="background-color: white; border-radius: 20px; padding: 10px; font-family: Arial, Helvetica, sans-serif;">In a fast-food, chain-driven, cookie-cutter world, it’s hard to find a true original. A restaurant that proudly holds its ground and doesn’t scamper after every passing trend. Since 1946, Murray’s has been that place. Whether you’re looking for a classic cocktail crafted from local spirits or a nationally acclaimed steak, we welcome you. Come in and discover the unique mash-up of new & true that draws people to our landmark location—and keeps them coming back for more.</p>
+                    <img src="assets/images/patrons.jpeg" id="happyCouple" height="450" width="450">
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer id="footer">
+        <div class="col-md-6" style="margin-left: 20px;">
+            <img src="../Project3/assets/images/logo.png" width="230" height="50" alt="" style="margin-top: 20px;"></a>
+            <br>
+            <h8>Copyright &copy FoundTable Inc.</h8>
+            <br><br>
+            <a href="#" style="margin-right: 50px; margin-top: 100px;">Featured Restaurants</a>
+            <a href="#" style="margin-right: 50px;">Search</a>
+            <a href="#" style="margin-right: 50px;">About</a>
+            <a href="#">Contact Us</a>
+            <br><br>
+
+        </div>
+
+
+
+
+    </footer>
+
+</body>
+
+</html>
