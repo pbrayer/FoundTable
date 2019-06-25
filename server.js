@@ -42,6 +42,7 @@ passport.deserializeUser((userDataFromCookie, done) => {
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+
 // Set up passport strategy
 passport.use(new GoogleStrategy(  
   {
