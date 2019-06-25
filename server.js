@@ -42,17 +42,6 @@ passport.deserializeUser((userDataFromCookie, done) => {
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Checks if a user is logged in
-const accessProtectionMiddleware = (req, res, next) => {  
-  if (req.isAuthenticated()) {
-    next();
-  } else {
-    res.status(403).json({
-      message: 'must be logged in to continue',
-    });
-  }
-};
-
 // Set up passport strategy
 passport.use(new GoogleStrategy(  
   {
@@ -68,10 +57,6 @@ passport.use(new GoogleStrategy(
   },
 ));
 
-//Adding custom route here just for initial login
-app.get('/protected', accessProtectionMiddleware, (req, res) => {  
-  res.sendFile(path.join(__dirname, "../public/input.html"));
-});
 
 // Routes
 // =============================================================

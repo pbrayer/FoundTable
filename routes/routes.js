@@ -2,15 +2,31 @@
 var path = require("path");
 const passport = require("passport");
 
+    // Checks if a user is logged in
+    const accessProtectionMiddleware = (req, res, next) => {  
+        if (req.isAuthenticated()) {
+          next();
+        } else {
+          res.redirect("/auth/google/callback");
+        }
+      };
+
 module.exports = function(app) {
 
     app.get('/auth/google/callback',  
-    passport.authenticate('google', { failureRedirect: '/', session: false }),
+    passport.authenticate('google', { failureRedirect: '/', session: true }),
     (req, res) => {
-        res.redirect("/");
-        res.sendFile(path.join(__dirname, "../public/input.html"));
+        res.redirect("/input");
     }
   );
+
+  app.get("/input", accessProtectionMiddleware, (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/input.html"));
+  });
+
+  app.get('/protected', accessProtectionMiddleware, (req, res) => {  
+    res.sendFile(path.join(__dirname, "../public/input.html"));
+  });
 
 // Serve a test API endpoint
 // This is just to test your API -- we're gonna delete this endpoint later
