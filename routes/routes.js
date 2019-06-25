@@ -3,9 +3,9 @@ var path = require("path");
 const passport = require("passport");
 
 // Checks if a user is logged in
-const accessProtectionMiddleware = (req, res, next) => {  
+const accessProtectionMiddleware = (req, res) => {  
     if (req.isAuthenticated()) {
-      next();
+        res.sendFile(path.join(__dirname, "../public/input.html"));
     } else {
       res.status(403).json({
         message: 'must be logged in to continue',
@@ -18,13 +18,12 @@ module.exports = function(app) {
     app.get('/auth/google/callback',  
     passport.authenticate('google', { failureRedirect: '/', session: false }),
     (req, res) => {
-      console.log('wooo we authenticated, here is our user object:', req.user);
-      res.json(req.user);
+        res.sendFile(path.join(__dirname, "../public/input.html"));
     }
   );
 
-  app.get('/protected', accessProtectionMiddleware, (req, res) => {  
-    res.sendFile(path.join(__dirname, "../public/input.html"));
+  app.get('/protected', (req, res) => {  
+      accessProtectionMiddleware(req,res)
   });
 
 // Serve a test API endpoint
