@@ -2,10 +2,9 @@
 var path = require("path");
 const passport = require("passport");
 
-// Checks if a user is logged in
-const accessProtectionMiddleware = (req, res) => {  
-    if (req.isAuthenticated()) {
-        res.sendFile(path.join(__dirname, "../public/input.html"));
+const accessProtectionMiddleware = (req, res, next) => {  
+    if (req.user) {
+      next();
     } else {
       res.status(403).json({
         message: 'must be logged in to continue',
@@ -22,8 +21,8 @@ module.exports = function(app) {
     }
   );
 
-  app.get('/protected', (req, res) => {  
-      accessProtectionMiddleware(req,res)
+  app.get('/protected', accessProtectionMiddleware, (req, res) => {  
+    res.sendFile(path.join(__dirname, "../public/input.html"));
   });
 
 // Serve a test API endpoint
