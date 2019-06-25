@@ -18,3 +18,4 @@ FoundTable is an app built on Node and uses Express as a server. Uses Bootstrap 
 * Passport (NPM)
 * Path
 * Passport Google 0auth
+* Express-session

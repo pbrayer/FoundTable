@@ -4,21 +4,39 @@
 // ******************************************************************************
 // *** Dependencies
 // =============================================================
-var express = require("express");
+const express = require("express");
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
+const session = require('express-session');
 
 
 // Sets up the Express App
 // =============================================================
-var app = express();
-var PORT = process.env.PORT || 8080;
+const app = express();
+const PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
-var db = require("./models");
+const db = require("./models");
 
 // Static directory
 app.use(express.static("public"));
+
+// Add session support
+app.use(session({  
+  secret: process.env.SESSION_SECRET || 'default_session_secret',
+  resave: false,
+  saveUninitialized: false,
+}));
+app.use(passport.initialize());  
+app.use(passport.session());
+
+passport.serializeUser((user, done) => {  
+  done(null, user);
+});
+
+passport.deserializeUser((userDataFromCookie, done) => {  
+  done(null, userDataFromCookie);
+});
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
