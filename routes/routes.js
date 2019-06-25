@@ -20,6 +20,7 @@ module.exports = function(app) {
     }
   );
 
+  //This is redundant to have two routes going to the same place but keeping this for now..
   app.get("/input", accessProtectionMiddleware, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/input.html"));
   });
