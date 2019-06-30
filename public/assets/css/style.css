@@ -100,6 +100,10 @@ body {
     box-shadow: 0 8px 6px -6px black;
 }
 
+#searchButton {
+        box-shadow: 0 8px 6px -6px black;
+}
+
 #chosenRestaurant {
     width: 100vw;
     height: 100vh;
@@ -120,6 +124,51 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+#aboutUs {
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+    
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+    /* Text styles */
+    text-align: center;
+    color: black; /* ADD THIS LINE */
+    
+    /* Background styles */
+    background-image: url('../images/aboutus.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+#searchHero {
+    width: 100vw;
+    height: 100vh;
+    
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Text styles */
+    text-align: center;
+    color: black; /* ADD THIS LINE */
+    
+    /* Background styles */
+    background-image: url('../images/searchbackground.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 
 #happyCouple {
     -webkit-box-shadow: 0 8px 6px -6px black;
@@ -170,3 +219,4 @@ body {
     box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
     transition: box-shadow 1s; 
 }
+
