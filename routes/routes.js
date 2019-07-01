@@ -29,6 +29,18 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/input.html"));
   });
 
+  app.get('/about', accessProtectionMiddleware, (req, res) => {  
+    res.sendFile(path.join(__dirname, "../public/about.html"));
+  });
+
+  app.get('/tableview', accessProtectionMiddleware, (req, res) => {  
+    res.sendFile(path.join(__dirname, "../public/tableview.html"));
+  });
+
+  app.get('/search', accessProtectionMiddleware, (req, res) => {  
+    res.sendFile(path.join(__dirname, "../public/search.html"));
+  });
+
 // Serve a test API endpoint
 // This is just to test your API -- we're gonna delete this endpoint later
 // app.get('/test', (req, res) => {  
