@@ -18,7 +18,8 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-light" style="padding: 0px 100px 0px 100px;">
+    <nav class="navbar navbar-expand-md navbar-dark bg-light"
+        style="padding: 0px 100px 0px 100px; position: fixed; width: 100%; z-index: 9999;">
         <div class="mx-auto order-0">
             <a class="navbar-brand mx-auto" href="#">
                 <img src="./assets/images/logo.png" width="230" height="50" alt=""></a>
@@ -32,10 +33,12 @@
                     <a class="nav-link" href="/" style="color: black; margin-right: 50px;">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.murraysrestaurant.com/" target="_blank" style="color: black; margin-right: 50px;">Go to Website</a>
+                    <a class="nav-link" href="https://www.murraysrestaurant.com/" target="_blank"
+                        style="color: black; margin-right: 50px;">Go to Website</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://www.murraysrestaurant.com/#" target="_blank" style="color: black; margin-right: 50px;">View Menu</a>
+                    <a class="nav-link" href="http://www.murraysrestaurant.com/#" target="_blank"
+                        style="color: black; margin-right: 50px;">View Menu</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="/protected" id="login"
@@ -54,29 +57,35 @@
                     <h4 style="color: white; margin-left: 10px;">How Many People are in Your Party?</h4>
                     <div class="form-group" style="width: 200px; margin: 0 auto;">
                         <select class="form-control" id="sel1">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
                         </select>
-                      </div>
+                    </div>
                     <br>
                     <h4 style="color: white; margin-left: 10px;">Check availability: </h4>
-                    <input type="datetime-local" id="meeting-time"
-       name="meeting-time" value="2019-06-30T19:30"
-       min="2019-06-25T00:00" max="2020-06-30T00:00">
+                    <input type="datetime-local" id="meeting-time" name="meeting-time" value="2019-06-30T19:30"
+                        min="2019-06-25T00:00" max="2020-06-30T00:00">
                     <a href="tableview.html" class="btn" id="findTable"
                         style="background-color:orange; color: white; border: none;">Find Table</a>
                 </div>
                 <div class="col-md-6 mx-auto" style="float: left;">
                     <h1 style="color: white; margin-top: 15px;">Murray's Steakhouse</h1>
-                    <p id="description" style="background-color: white; border-radius: 20px; padding: 10px; font-family: Arial, Helvetica, sans-serif;">In a fast-food, chain-driven, cookie-cutter world, it’s hard to find a true original. A restaurant that proudly holds its ground and doesn’t scamper after every passing trend. Since 1946, Murray’s has been that place. Whether you’re looking for a classic cocktail crafted from local spirits or a nationally acclaimed steak, we welcome you. Come in and discover the unique mash-up of new & true that draws people to our landmark location—and keeps them coming back for more.</p>
+                    <p id="description"
+                        style="background-color: white; border-radius: 20px; padding: 10px; font-family: Arial, Helvetica, sans-serif;">
+                        In a fast-food, chain-driven, cookie-cutter world, it’s hard to find a true original. A
+                        restaurant that proudly holds its ground and doesn’t scamper after every passing trend. Since
+                        1946, Murray’s has been that place. Whether you’re looking for a classic cocktail crafted from
+                        local spirits or a nationally acclaimed steak, we welcome you. Come in and discover the unique
+                        mash-up of new & true that draws people to our landmark location—and keeps them coming back for
+                        more.</p>
                     <img src="assets/images/patrons.jpeg" id="happyCouple" height="350" width="350">
                 </div>
             </div>
         </section>
     </div>
-    
+
     <footer id="footer">
         <div class="col-md-6" style="margin-left: 20px;">
             <img src="./assets/images/logo.png" width="230" height="50" alt="" style="margin-top: 20px;"></a>

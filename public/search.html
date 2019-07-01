@@ -14,7 +14,6 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -31,16 +30,17 @@
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/protected" style="color: black; margin-right: 50px;">Featured Restaurants</a>
+                    <a class="nav-link" href="index.html" style="color: black; margin-right: 50px;">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="search.html" style="color: black; margin-right: 50px;">Search</a>
+                    <a class="nav-link" href="input.html" style="color: black; margin-right: 50px;">Featured
+                        Restaurants</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html" style="color: black; margin-right: 50px;">About</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#" id="login"
+                    <a class="nav-link" href="/protected" id="login"
                         style="color: white; margin-right: 50px; padding-left: 20px; padding-right: 20px; background-color: #0091B9; border-style: hidden; border-width: 1px; border-radius: 15px; text-align: center;">Log
                         In</a>
                 </li>
@@ -48,53 +48,58 @@
         </div>
     </nav>
 
-    <form class="text-center border border-light p-5" id="confirmationForm">
+    <div class="row">
+        <section class="hero" id="searchHero">
+            <div class="hero-inner">
+                <div class="col-md-12" style="text-align: center;">
+                    <h2 style="color: white;">Search by city or style...</h2>
 
-        <p class="h4 mb-4">Confirm Your Reservation</p>
+                    <form>
+                        <div class="form-row align-items-center">
+                            <div class="col-auto my-1">
+                                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                    <option selected>Choose a City</option>
+                                    <option value="1">Minneapolis</option>
+                                    <option value="2">Chicago</option>
+                                    <option value="3">New York</option>
+                                </select>
+                            </div>
+                            <div class="col-auto my-1">
+                                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                    <option selected>Type of Food</option>
+                                    <option value="1">American</option>
+                                    <option value="2">Italian</option>
+                                    <option value="3">Mexican</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
 
-        <div class="form-row mb-4">
-            <div class="col">
+                    <a href="#" class="btn" id="searchButton"
+                        style="background-color:orange; color: white; border: none;">Find Table</a>
 
-                <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
+
+
+                </div>
+
             </div>
-            <div class="col">
-
-                <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
-            </div>
-        </div>
-
-        <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
-
-        <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password"
-            aria-describedby="defaultRegisterFormPasswordHelpBlock">
-        <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-            At least 8 characters and 1 digit
-        </small>
-
-        <input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number"
-            aria-describedby="defaultRegisterFormPhoneHelpBlock">
-        <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-            Required for Reservation
-        </small>
-
-        <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
-            <label class="custom-control-label" for="defaultRegisterFormNewsletter">Subscribe to our newsletter</label>
-        </div>
-
-        <button class="btn btn-info my-4 btn-block" id="confirmButton" type="submit"
-            style="background-color: #0091B9; box-shadow: 0 8px 6px -6px black;">Confirm Reservation</button>
-
-        <hr>
-
-        <p>By clicking
-            <em>Sign up</em> you agree to our
-            <a href="" target="_blank">terms of service</a>
-
-    </form>
 
 
-    <footer>
+
+
+
+        </section>
+
+
+
+
+
+    </div>
+
+
+    <footer id="footer">
         <div class="col-md-6" style="margin-left: 20px;">
             <img src="./assets/images/logo.png" width="230" height="50" alt="" style="margin-top: 20px;"></a>
             <br>
@@ -108,11 +113,7 @@
 
         </div>
 
-
-
-
     </footer>
-
 
 </body>
 
