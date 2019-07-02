@@ -8,6 +8,8 @@ const express = require("express");
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const session = require('express-session');
+// Requiring our models for syncing
+const db = require("./models");
 
 
 // Sets up the Express App
@@ -22,8 +24,7 @@ db.sequelize.sync({ force: false }).then(function() {
   });
 });
 
-// Requiring our models for syncing
-const db = require("./models");
+
 
 // Static directory
 app.use(express.static("public"));
