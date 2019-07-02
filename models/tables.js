@@ -1,13 +1,13 @@
 module.exports = function(sequelize, DataTypes) {
-    // Added code here to create an Events model
-    // 'return' the events after defining
-    var Tables = sequelize.define("Tables", {
+    // Added code here to create a Tables model
+    // 'return' the tables after defining
+    var foundTables = sequelize.define("foundTables", {
     taken: {
         type: DataTypes.BOOLEAN,
         defaultValue: false
     }
   });
-    return Tables;
+    return foundTables;
   };
 
   //Timeslot

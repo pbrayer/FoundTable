@@ -42,11 +42,17 @@ module.exports = function(app) {
   });
 
   app.put("/api/tables/:id", function(req, res) {
-    db.Tables.update({taken: req.body.taken}, //was 1
+    db.foundTables.update({taken: req.body.taken}, //was 1
       {where: {
         id: req.params.id
       }}).then(function(results) {
       res.json(results);
+    });
+  });
+
+  app.get("/api/tables", function(req, res) {   
+    db.foundTables.findAll().then(function(tableData) {
+      res.json(tableData);
     });
   });
 

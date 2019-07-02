@@ -1,11 +1,5 @@
 $(function() {
 
-    for(let i = 1; i < 24; i++){
-        if($("img").hasClass("tableRed") || $("img").hasClass("tableBlue")){
-            $('img').attr('data-id', i);
-            }
-    }
-
     if($("#roundTable1").hasClass("tableRed")){
         $(this).attr("src","./assets/images/round-table-red-one.png");
     }
@@ -54,6 +48,20 @@ $(function() {
         $(this).attr("src","./assets/images/booth-table-red-two.png");
     }
     
+    $.get("/api/tables", function(data) {
+        for(var i = 0; i < data.length; i++) {
+            let x = i+1
+        
+           if(data[i].favorited == 0){ //Deciding which column the buttons will go to based on favorited state
+            $("a").data(x).attr('class', 'tableBlue');
+           }
+            else{
+            $("a").data(x).attr('class', 'tableRed');
+            }
+        }
+
+        console.log(data)
+    });
     
 
     $(document).on("click", ".tableBlue", function(){
@@ -79,14 +87,5 @@ $(function() {
         $(document).on("click", ".tableRed", function(){
           alert("Table is taken!");
         });
-
-
-
-
-
-
-
-
-
-    
+        
 });
