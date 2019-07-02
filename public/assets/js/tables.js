@@ -77,8 +77,8 @@ $(function() {
     });
 
         $(document).on("click", ".tableRed", function(){
-          alert("Table is taken!")
-        }
+          alert("Table is taken!");
+        });
 
 
 
