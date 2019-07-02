@@ -8,8 +8,7 @@ const express = require("express");
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const session = require('express-session');
-// Requiring our models for syncing
-const db = require("./models");
+
 
 
 // Sets up the Express App
@@ -17,10 +16,15 @@ const db = require("./models");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-
+// Requiring our models for syncing
+const db = require("./models");
 
 // Static directory
 app.use(express.static("public"));
+
+// Sets up the Express app to handle data parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Add session support
 app.use(session({  
@@ -39,10 +43,6 @@ passport.deserializeUser((userDataFromCookie, done) => {
   done(null, userDataFromCookie);
 });
 
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
 // Set up passport strategy
 passport.use(new GoogleStrategy(  
   {
@@ -57,7 +57,6 @@ passport.use(new GoogleStrategy(
     return cb(null, profile);
   },
 ));
-
 
 // Routes
 // =============================================================

@@ -41,8 +41,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/search.html"));
   });
 
-  app.put("/api/tables/:id", function(req, res) {
-    db.foundTables.update({taken: req.body.taken}, //was 1
+  app.put("/api/tables/:id",  accessProtectionMiddleware, (req, res) => {
+    db.foundTables.update({taken: 1}, //was 1
       {where: {
         id: req.params.id
       }}).then(function(results) {
@@ -50,7 +50,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/tables", function(req, res) {   
+  app.get("/api/tables",  accessProtectionMiddleware, (req, res) => {   
     db.foundTables.findAll().then(function(tableData) {
       res.json(tableData);
     });
