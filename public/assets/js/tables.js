@@ -1,65 +1,60 @@
 $(function() {
-
-    if($("#roundTable1").hasClass("tableRed")){
-        $(this).attr("src","./assets/images/round-table-red-one.png");
-    }
-
-    if($("#roundTable2").hasClass("tableRed")){
-        $(this).attr("src","./assets/images/round-table-red-two.png");
-    }
-
-    if($("#roundTable1").hasClass("tableBlue")){
-        $(this).attr("src","./assets/images/round-table-blue-one.png");
-    }
-
-    if($("#roundTable2").hasClass("tableBlue")){
-        $(this).attr("src","./assets/images/round-table-blue-two.png");
-    }
-
-    if($("#longTable1").hasClass("tableBlue")){
-        $(this).attr("src","./assets/images/long-table-blue-one.png");
-    }
-
-    if($("#longTable2").hasClass("tableBlue")){
-        $(this).attr("src","./assets/images/long-table-blue-two.png");
-    }
-
-    if($("#longTable1").hasClass("tableRed")){
-        $(this).attr("src","./assets/images/long-table-red-one.png");
-    }
-
-    if($("#longTable2").hasClass("tableRed")){
-        $(this).attr("src","./assets/images/long-table-red-two.png");
-    }
-    
-    if($("#boothTable1").hasClass("tableBlue")){
-        $(this).attr("src","./assets/images/booth-table-blue-one.png");
-    }
-
-    if($("#boothTable2").hasClass("tableBlue")){
-        $(this).attr("src","./assets/images/booth-table-blue-two.png");
-    }
-    
-    if($("#boothTable1").hasClass("tableRed")){
-        $(this).attr("src","./assets/images/booth-table-red-one.png");
-    }
-
-    if($("#boothTable2").hasClass("tableBlue")){
-        $(this).attr("src","./assets/images/booth-table-red-two.png");
-    }
     
     $.get("/api/tables", function(data) {
         for(var i = 0; i < data.length; i++) {
             let x = i+1
         
-           if(data[i].favorited == 0){ //Deciding which column the buttons will go to based on favorited state
+           if(data[i].taken == 0){ //Deciding which column the buttons will go to based on favorited state
             $("[data-id= " + x + "]").attr("class", "tableBlue");
+
+              if($("[data-id= " + x + "]").is("#boothTable1")){
+                $("[data-id= " + x + "]").attr("src","./assets/images/booth-table-blue-one.png");
+              }
+
+              if($("[data-id= " + x + "]").is("#boothTable2")){
+                $("[data-id= " + x + "]").attr("src","./assets/images/booth-table-blue-two.png");
+              }
+
+              if($("[data-id= " + x + "]").is("#longTable1")){
+                $("[data-id= " + x + "]").attr("src","./assets/images/long-table-blue-one.png");
+              }
+
+              if($("[data-id= " + x + "]").is("#longTable2")){
+                $("[data-id= " + x + "]").attr("src","./assets/images/long-table-blue-two.png");
+              }
+
+              if($("[data-id= " + x + "]").is("#roundTable1")){
+                $("[data-id= " + x + "]").attr("src","./assets/images/round-table-blue-one.png");
+              }
+
+              if($("[data-id= " + x + "]").is("#roundTable2")){
+                $("[data-id= " + x + "]").attr("src","./assets/images/round-table-blue-two.png");
+              }
+
            }
             else{
             $("[data-id= " + x + "]").attr("class", "tableRed");
+
+             if($("[data-id= " + x + "]").is("#boothTable1")){
+                $("[data-id= " + x + "]").attr("src","./assets/images/booth-table-red-one.png");
+              }
+              if($("[data-id= " + x + "]").is("#boothTable2")){
+                $("[data-id= " + x + "]").attr("src","./assets/images/booth-table-red-two.png");
+              }
+              if($("[data-id= " + x + "]").is("#longTable1")){
+                $("[data-id= " + x + "]").attr("src","./assets/images/long-table-red-one.png");
+              }
+              if($("[data-id= " + x + "]").is("#longTable2")){
+                $("[data-id= " + x + "]").attr("src","./assets/images/long-table-red-two.png");
+              }
+              if($("[data-id= " + x + "]").is("#roundTable1")){
+                $("[data-id= " + x + "]").attr("src","./assets/images/round-table-red-one.png");
+              }
+              if($("[data-id= " + x + "]").is("#roundTable2")){
+                $("[data-id= " + x + "]").attr("src","./assets/images/round-table-red-two.png");
+              }
             }
         }
-
         console.log(data)
     });
     
