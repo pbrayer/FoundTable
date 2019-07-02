@@ -53,10 +53,10 @@ $(function() {
             let x = i+1
         
            if(data[i].favorited == 0){ //Deciding which column the buttons will go to based on favorited state
-            $("a").data(x).attr('class', 'tableBlue');
+            $("[data-id= " + x + "]").attr("class", "tableBlue");
            }
             else{
-            $("a").data(x).attr('class', 'tableRed');
+            $("[data-id= " + x + "]").attr("class", "tableRed");
             }
         }
 
@@ -87,5 +87,5 @@ $(function() {
         $(document).on("click", ".tableRed", function(){
           alert("Table is taken!");
         });
-        
+
 });
