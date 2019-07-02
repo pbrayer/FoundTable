@@ -15,6 +15,13 @@ const session = require('express-session');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+// Syncing our sequelize models and then starting our express app
+db.sequelize.sync({ force: false }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+});
+
 // Requiring our models for syncing
 const db = require("./models");
 
@@ -72,3 +79,5 @@ require("./routes/routes")(app);
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
+
+  

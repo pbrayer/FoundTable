@@ -41,6 +41,15 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/search.html"));
   });
 
+  app.put("/api/tables/:id", function(req, res) {
+    db.Tables.update({taken: req.body.taken}, //was 1
+      {where: {
+        id: req.params.id
+      }}).then(function(results) {
+      res.json(results);
+    });
+  });
+
 // Serve a test API endpoint
 // This is just to test your API -- we're gonna delete this endpoint later
 // app.get('/test', (req, res) => {  
