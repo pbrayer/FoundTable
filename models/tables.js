@@ -5,10 +5,13 @@ module.exports = function(sequelize, DataTypes) {
     taken: {
         type: DataTypes.BOOLEAN,
         defaultValue: false
-    }
+    },
+    partySize: {
+        type: DataTypes.INTEGER, 
+        defaultValue: 2
+    },
   });
     return foundTables;
   };
 
   //Timeslot
-  //Name of person

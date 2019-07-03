@@ -3,6 +3,12 @@ $(function() {
     $.get("/api/tables", function(data) {
         for(var i = 0; i < data.length; i++) {
             let x = i+1
+
+            
+
+          if($("[data-id= " + x + "]").attr("class", "tableBlue") || $("[data-id= " + x + "]").attr("class", "tableRed")){
+            $("[data-id= " + x + "]").attr("data-state", data[i].partySize);
+          }
         
            if(data[i].taken == 0){ //Deciding which column the buttons will go to based on favorited state
             $("[data-id= " + x + "]").attr("class", "tableBlue");
@@ -60,6 +66,9 @@ $(function() {
     
 
     $(document).on("click", ".tableBlue", function(){
+        
+        if(sessionStorage.partySize <= $(this.attr("data-state"))){
+
         let id = $(this).data("id");
       console.log(id)
         let newTableState = {
@@ -77,10 +86,14 @@ $(function() {
       location.reload();
     }
   );
+}
+else{
+    $('#partySizeModal').modal('toggle');
+}
     });
 
         $(document).on("click", ".tableRed", function(){
-          alert("Table is taken!");
+            $('#reservedModal').modal('toggle');
         });
 
 });
