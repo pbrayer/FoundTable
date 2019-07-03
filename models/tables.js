@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
     partySize: {
         type: DataTypes.INTEGER, 
         defaultValue: 2
-    },
+    }
   });
     return foundTables;
   };
