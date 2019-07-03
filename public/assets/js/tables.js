@@ -66,8 +66,9 @@ $(function() {
     
 
     $(document).on("click", ".tableBlue", function(){
-        
-        if(sessionStorage.partySize <= $(this.attr("data-state"))){
+       let tableSize = $(this).attr("data-state");
+
+        if(sessionStorage.partySize <= tableSize){
 
         let id = $(this).data("id");
       console.log(id)
