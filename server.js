@@ -17,7 +17,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
-const db = require("./src/models");
+const db = require("./models");
 
 // Static directory
 app.use(express.static("public"));
