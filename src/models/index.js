@@ -34,8 +34,7 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-module.exports = db;
-module.exports = function(sequelize, DataTypes) {
+module.exports = {db, function(sequelize, DataTypes) {
   // Added code here to create a Tables model
   // 'return' the tables after defining
   var foundTables = sequelize.define("foundTables", {
@@ -49,4 +48,5 @@ module.exports = function(sequelize, DataTypes) {
   }
 });
   return foundTables;
-};
+}
+}
