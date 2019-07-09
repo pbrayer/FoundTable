@@ -1,6 +1,7 @@
 // Requiring path to so we can use relative routes to our HTML files
+var path = require("path");
 const passport = require("passport");
-var db = require("./models");
+var db = require("../models");
 
     // Checks if a user is logged in
     const accessProtectionMiddleware = (req, res, next) => {  
@@ -22,18 +23,23 @@ module.exports = function(app) {
 
   //This is redundant to have two routes going to the same place but keeping this for now..
   app.get("/input", accessProtectionMiddleware, (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/input.html"));
   });
 
   app.get('/protected', accessProtectionMiddleware, (req, res) => {  
+    res.sendFile(path.join(__dirname, "../public/input.html"));
   });
 
   app.get('/about', accessProtectionMiddleware, (req, res) => {  
+    res.sendFile(path.join(__dirname, "../public/about.html"));
   });
 
   app.get('/tableview', accessProtectionMiddleware, (req, res) => {  
+    res.sendFile(path.join(__dirname, "../public/tableview.html"));
   });
 
-  app.get('/search', accessProtectionMiddleware, (req, res) => {
+  app.get('/search', accessProtectionMiddleware, (req, res) => {  
+    res.sendFile(path.join(__dirname, "../public/search.html"));
   });
 
   app.put("/api/tables/:id",  accessProtectionMiddleware, (req, res) => {

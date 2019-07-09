@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Found Table</title>
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src = "./assets/js/tables.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-light"
+        style="padding: 0px 100px 0px 100px; position: fixed; width: 100%; z-index: 9999;">
+        <div class="mx-auto order-0">
+            <a class="navbar-brand mx-auto" href="#">
+                <img src="./assets/images/logo.png" width="230" height="50" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/" style="color: black; margin-right: 50px;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.murraysrestaurant.com/" target="_blank"
+                        style="color: black; margin-right: 50px;">Go to Website</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://www.murraysrestaurant.com/#" target="_blank"
+                        style="color: black; margin-right: 50px;">View Menu</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/protected" id="login"
+                        style="color: white; margin-right: 50px; padding-left: 20px; padding-right: 20px; background-color: #0091B9; border-style: hidden; border-width: 1px; border-radius: 15px; text-align: center;">Log
+                        In</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+  
+    <div class="row" id="tablePicker" style="padding-top: 100px;">
+        <div class="col-md-2">
+            <img id = "boothTable2" class="tableBlue" data-id = "1" src="./assets/images/booth-table-blue-two.png">
+            <img id = "longTable1" class="tableBlue" data-id = "2" src="./assets/images/long-table-blue-one.png">
+            <img id = "longTable1" class="tableBlue" data-id = "3" src="./assets/images/long-table-blue-one.png">
+            <img id = "longTable1" class="tableBlue" data-id = "4" src="./assets/images/long-table-blue-one.png">
+            <img id = "longTable2" class="tableBlue" data-id = "5" src="./assets/images/long-table-blue-two.png">
+            <img id = "longTable2" class="tableBlue" data-id = "6" src="./assets/images/long-table-blue-two.png">
+            <img id = "longTable2" class="tableRed" data-id = "7" src="./assets/images/long-table-red-two.png">
+        </div>
+
+        <div class="col-md-2" style="text-align: center;">
+            <img id = "roundTable1" class="tableBlue" data-id = "8" src="./assets/images/round-table-blue-one.png">
+            <img id = "roundTable1" class="tableBlue" data-id = "9" src="./assets/images/round-table-blue-one.png">
+            <img id = "roundTable1" class="tableRed" data-id = "10" src="./assets/images/round-table-red-one.png">
+            <h4
+                style="border-radius: 100%; border: solid; border: 2px solid black; text-align: center; padding: 40px 0px 40px 0px;">
+                Bar Area</h4>
+            <img id = "roundTable1" class="tableRed" data-id = "11" src="./assets/images/round-table-red-one.png">
+            <img id = "roundTable1" class="tableBlue" data-id = "12" src="./assets/images/round-table-blue-one.png">
+            <img id = "roundTable1" class="tableRed" data-id = "13" src="./assets/images/round-table-red-one.png">
+        </div>
+
+        <div class="col-md-3" style="text-align: center;">
+            <h8><img src="./assets/images/round-table-blue-one.png" style="width: 20px; height: 20px;"> = Available<img
+                    src="./assets/images/round-table-red-one.png"
+                    style="width: 20px; height: 20px; margin-left: 10px;"> = Taken</h8>
+            <br><br><br><br><br><br><br><br><br><br>
+            <img id = "roundTable2" class="tableRed" data-id = "14" src="./assets/images/round-table-red-two.png">
+            <img id = "boothTable1" class="tableBlue" data-id = "15" src="./assets/images/booth-table-blue-one.png">
+            <h4
+                style="border-radius: 100%; border: solid; border: 2px solid black; text-align: center; padding-bottom: 60px; padding-top: 60px;">
+                Piano Lounge</h4>
+            <br>
+            <img id = "boothTable1" class="tableBlue" data-id = "16" src="./assets/images/booth-table-blue-one.png">
+            <img id = "roundTable2" class="tableBlue" data-id = "17" src="./assets/images/round-table-blue-two.png">
+        </div>
+
+        <div class="col-md-2">
+            <img id = "roundTable1" class="tableBlue" data-id = "18" src="./assets/images/round-table-blue-one.png">
+            <img id = "roundTable1" class="tableBlue" data-id = "19" src="./assets/images/round-table-blue-one.png">
+            <img id = "roundTable1" class="tableRed" data-id = "20" src="./assets/images/round-table-red-one.png">
+            <br><br><br><br><br><br>
+            <img id = "roundTable1" class="tableRed" data-id = "21" src="./assets/images/round-table-red-one.png">
+            <img id = "roundTable1" class="tableBlue" data-id = "22" src="./assets/images/round-table-blue-one.png">
+            <img id = "roundTable1" class="tableRed" data-id = "23" src="./assets/images/round-table-red-one.png">
+        </div>
+
+        <div class="col-md-3" style="text-align: center;">
+            <br>
+            <h8
+                style="background-color: cornflowerblue; color: white; border: solid; border: 2px solid black; padding: 5px;">
+                Men's Restroom</h8>
+            <h8 style="background-color: pink; color: white; border: solid; border: 2px solid black; padding: 5px;">
+                Women's Restroom</h8>
+            <h6
+                style="border-radius: 15%; border: solid; border: 2px solid black; text-align: center; padding-bottom: 60px; padding-top: 60px; margin-top: 330px; margin-right: 10px;">
+                Host/Lobby Area</h6>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <h8 style="background-color: green; color: white; border: solid; border: 2px solid black; padding: 5px;">
+                Exit to Patio/Smoking Area</h8>
+
+        </div>
+<!-- Reserved Modal -->
+<div class="modal fade" id="reservedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">We're sorry. This table has already been reserved.</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Party Size Modal -->
+<div class="modal fade" id="partySizeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">This table is too small for your selected party. Please choose a larger table.</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+
+    <footer>
+        <div class="col-md-6" style="margin-left: 20px;">
+            <img src="./assets/images/logo.png" width="230" height="50" alt="" style="margin-top: 20px;"></a>
+            <br>
+            <h8>Copyright &copy FoundTable Inc.</h8>
+            <br><br>
+            <a href="/protected" style="margin-right: 50px; margin-top: 100px;">Featured Restaurants</a>
+            <a href="/search" style="margin-right: 50px;">Search</a>
+            <a href="/about" style="margin-right: 50px;">About</a>
+            <br><br>
+
+        </div>
+
+
+
+
+    </footer>
+
+</body>
+
+</html>
