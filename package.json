@@ -17,7 +17,8 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "sequelize": "^5.8.10",
-    "sequelize-cli": "^5.5.0"
+    "sequelize-cli": "^5.5.0",
+    "webpack": "^4.35.3"
   },
   "scripts": {
     "start": "react-scripts start",
