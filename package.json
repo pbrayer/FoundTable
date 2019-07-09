@@ -1,7 +1,8 @@
 {
   "name": "foundtable",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Customized seating selection for consumers and their favorite restaurants",
+  "main": "index.js",
   "dependencies": {
     "express": "^4.17.1",
     "express-session": "^1.16.2",
@@ -11,33 +12,22 @@
     "passport-google-oauth": "^2.0.0",
     "passport-google-oauth20": "^2.0.0",
     "path": "^0.12.7",
-    "pg-hstore": "^2.3.3",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
     "sequelize": "^5.8.10",
     "sequelize-cli": "^5.5.0"
   },
+  "devDependencies": {},
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pbrayer/FoundTable.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "author": "Sam, Christiaan, Chris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pbrayer/FoundTable/issues"
+  },
+  "homepage": "https://github.com/pbrayer/FoundTable#readme"
 }
