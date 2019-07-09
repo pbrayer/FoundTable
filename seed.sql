@@ -25,3 +25,5 @@ INSERT INTO foundTables (taken, partySize) VALUES (FALSE, 2);
 INSERT INTO foundTables (taken, partySize) VALUES (FALSE, 2);
 
 SELECT * FROM foundTables;
+
+DROP TABLE foundTables; //Optional
