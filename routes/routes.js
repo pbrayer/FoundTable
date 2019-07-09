@@ -1,6 +1,6 @@
 // Requiring path to so we can use relative routes to our HTML files
 const passport = require("passport");
-var db = require("../models");
+var db = require("./models");
 
     // Checks if a user is logged in
     const accessProtectionMiddleware = (req, res, next) => {  

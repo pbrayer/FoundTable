@@ -60,7 +60,7 @@ passport.use(new GoogleStrategy(
 
 // Routes
 // =============================================================
-require("./src/routes/routes")(app);
+require("./routes/routes")(app);
   
 // Syncing our sequelize models and then starting our express app
 db.sequelize.sync().then(function() {
