@@ -20,22 +20,6 @@ module.exports = function(app) {
     }
   );
 
-  //This is redundant to have two routes going to the same place but keeping this for now..
-  app.get("/input", accessProtectionMiddleware, (req, res) => {
-  });
-
-  app.get('/protected', accessProtectionMiddleware, (req, res) => {  
-  });
-
-  app.get('/about', accessProtectionMiddleware, (req, res) => {  
-  });
-
-  app.get('/tableview', accessProtectionMiddleware, (req, res) => {  
-  });
-
-  app.get('/search', accessProtectionMiddleware, (req, res) => { 
-  });
-
   app.put("/api/tables/:id",  accessProtectionMiddleware, (req, res) => {
     db.foundTables.update({taken: 1}, //was 1
       {where: {
