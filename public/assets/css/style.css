@@ -1,8 +1,18 @@
 body {
     margin: 0;
     font-family: sans-serif;
-    padding-top: 65px;
 }
+
+.modal {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    bottom: 0;
+    left: 0;
+    z-index: 10040;
+    overflow: auto;
+    overflow-y: auto;
+ }
 
 .navbar {
     padding: 0px 100px 0px 100px;
