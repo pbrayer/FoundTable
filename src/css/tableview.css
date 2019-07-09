@@ -1,0 +1,119 @@
+#navbar {
+    padding: 0px 100px 0px 100px;
+    position: fixed; 
+    width: 100%;
+    z-index: 9999;
+}
+
+#link1, #link2, #link3 {
+    color: black;
+    margin-right: 50px;
+}
+
+#login {
+    color: white;
+    margin-right: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #0091B9;
+    border-style: hidden;
+    border-width: 1px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#tablePicker {
+    padding-top: 100px;
+}
+
+#column2 {
+    text-align: center;
+}
+
+#bar {
+    border-radius: 100%;
+    border: solid;
+    border: 2px solid black; 
+    text-align: center;
+    padding: 40px 0px 40px 0px;
+}
+
+#column3 {
+    text-align: center;
+}
+
+#available {
+    width: 20px;
+    height: 20px;
+}
+
+#taken {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+#lounge {
+    border-radius: 100%;
+    border: solid;
+    border: 2px solid black;
+    text-align: center;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+#column5 {
+    text-align: center;
+}
+
+#mens {
+    background-color: cornflowerblue; 
+    color: white;
+    border: solid;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+#womens {
+    background-color: pink;
+    color: white;
+    border: solid;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+#lobby {
+    border-radius: 15%;
+    border: solid;
+    border: 2px solid black;
+    text-align: center;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    margin-top: 330px;
+    margin-right: 10px;
+}
+
+#patio {
+    background-color: green;
+    color: white;
+    border: solid;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+#footerColumn {
+    margin-left: 20px;
+}
+
+#footerLogo {
+    margin-top: 20px;
+}
+
+#footerLink1 {
+    margin-right: 50px;
+    margin-top: 100px;
+}
+
+#footerLink2, #footerLink3 {
+    margin-right: 50px;
+}

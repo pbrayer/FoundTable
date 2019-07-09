@@ -1,149 +1,43 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
-<html lang="en-us">
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src = "input.js"></script>
+    <script src = "tables.js"></script>
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Found Table</title>
-
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-
-<body>
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-light"
-        style="padding: 0px 100px 0px 100px; position: fixed; width: 100%; z-index: 9999;">
-        <div class="mx-auto order-0">
-            <a class="navbar-brand mx-auto" href="#">
-                <img src="./assets/images/logo.png" width="230" height="50" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/protected" style="color: black; margin-right: 50px;">Featured Restaurants</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/search" style="color: black; margin-right: 50px;">Search</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/about" style="color: black; margin-right: 50px;">About</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/protected" id="login"
-                        style="color: white; margin-right: 50px; padding-left: 20px; padding-right: 20px; background-color: #0091B9; border-style: hidden; border-width: 1px; border-radius: 15px; text-align: center;">Log
-                        In</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="row">
-        <section class="hero" id="explainer">
-            <div class="hero-inner">
-                <div class="col-md-6">
-                    <h2 style="color: white; margin-left: 10px;">Table Reservation System for Your Best Seat in the
-                        House</h2>
-                    <h4 style="color: white; margin-left: 10px;">Helping customers plan, reserve, and pick the best
-                        available table for their party.</h4>
-                    <a href="/auth/google/callback" class="btn" id="getStarted"
-                        style="background-color:orange; color: white; border: none;">Get Started</a>
-                </div>
-            </div>
-        </section>
-    </div>
-    <div class="row" style="margin-left: 10px; margin-right: 10px;">
-        <div class="col-md-12" style="text-align: center; margin-top: 20px;">
-            <h4><strong>Why Customers Use FoundTable Reservation System</strong></h4>
-            <h6>We deliver a delightful booking solution that saves you time and makes your next dining experience easy
-                to plan.</h6>
-
-        </div>
-    </div>
-
-    <div class="container" id="steps">
-        <div class="row" style="text-align: center;">
-            <div class="col-md-4 mx-auto">
-                <h4 style="margin-top: 50px;"><strong>How It Works</strong></h4>
-                <hr>
-            </div>
-
-        </div>
-
-        <div class="row mx-auto" style="height: 200px;">
-
-            <h2
-                style="margin: 0 auto; background-color:#0091B9; color: white; height: 100px; width: 100px; border-style: solid; border-width: 2px; border-radius: 100px; text-align: center; padding-top: 25px;">
-                1</h2>
-            <h6 style="margin: 0 auto; padding-top: 10px; height: 300px; width: 200px;">Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h6>
-
-            <h2
-                style="margin: 0 auto; background-color: #0091B9; color: white; height: 100px; width: 100px; border-style: solid; border-width: 2px; border-radius: 100px; text-align: center; padding-top: 25px;">
-                2</h2>
-            <h6 style="margin: 0 auto; padding-top: 10px; height: 300px; width: 200px;">Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h6>
-
-            <h2
-                style="margin: 0 auto; background-color: #0091B9; color: white; height: 100px; width: 100px; border-style: solid; border-width: 2px; border-radius: 100px; text-align: center; padding-top: 25px;">
-                3</h2>
-            <h6 style="margin: 0 auto; padding-top: 10px; height: 300px; width: 200px;">Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h6>
-
-        </div>
-
-    </div>
-
-    <div class="row" style="margin-left: 50px; margin-right: 50px;">
-
-        <div class="col-md-7">
-
-            <img src="./assets/images/iPhoneX-Mockup.png" alt="" style="margin-top: 20px;">
-
-        </div>
-
-        <div class="col-md-5" style="text-align: center; margin-top: 200px;">
-            <h2 style="color: black; margin-left: 10px;">Featured Restaurants</h2>
-            <hr>
-            <h6 style="color: black; margin-left: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.</h6>
-            <a href="#" class="btn"
-                style="width: 100px; background-color:orange; color: white; border: none; border-radius: 0; box-shadow: 0 8px 6px -6px black;">View</a>
-
-        </div>
-
-    </div>
-
-    <footer id="footer">
-        <div class="col-md-6" style="margin-left: 20px;">
-            <img src="./assets/images/logo.png" width="230" height="50" alt="" style="margin-top: 20px;"></a>
-            <br>
-            <h8>Copyright &copy FoundTable Inc.</h8>
-            <br><br>
-            <a href="/protected" style="margin-right: 50px; margin-top: 100px;">Featured Restaurants</a>
-            <a href="/search" style="margin-right: 50px;">Search</a>
-            <a href="/about" style="margin-right: 50px;">About</a>
-            <br><br>
-
-        </div>
-
-
-
-
-    </footer>
-
-
-
-</body>
-
-
-
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
 </html>
