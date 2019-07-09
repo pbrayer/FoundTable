@@ -17,7 +17,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
-const db = require("./models");
+const db = require("./src/models");
 
 // Static directory
 app.use(express.static("public"));
@@ -60,7 +60,7 @@ passport.use(new GoogleStrategy(
 
 // Routes
 // =============================================================
-require("./routes/routes")(app);
+require("./src/routes/routes")(app);
   
 // Syncing our sequelize models and then starting our express app
 db.sequelize.sync().then(function() {
