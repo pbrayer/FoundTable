@@ -1,3 +1,0 @@
-DROP DATABASE IF EXISTS `tables`;
-CREATE DATABASE `tables`;
-USE `tables`;

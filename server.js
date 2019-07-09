@@ -19,8 +19,7 @@ const PORT = process.env.PORT || 8080;
 // Requiring our models for syncing
 const db = require("./models");
 
-// Static directory
-app.use(express.static("public"));
+app.use('/', express.static('./public'));
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -68,3 +67,11 @@ db.sequelize.sync().then(function() {
     console.log("App listening on PORT " + PORT);
   });
 });
+
+// console.log that your server is up and running
+app.listen(port, () => console.log(`Listening on port ${port}`));
+
+
+
+
+  
